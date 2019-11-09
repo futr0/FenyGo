@@ -18,9 +18,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        healthDisplay.text = "Życie: " + health.ToString();
+        healthDisplay.text = "WPhe: " + (Mathf.Round(health * 1000.0f) / 1000.0f).ToString();
 
-        if(health <=0)
+        if (health <=0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
