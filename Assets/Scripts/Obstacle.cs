@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    public int damage = 1;
+    public float grams;
+    public float maxGrams;
     public float speed;
 
     public GameObject effect;
@@ -20,9 +21,17 @@ public class Obstacle : MonoBehaviour
         {
             Instantiate(effect, transform.position, Quaternion.identity);
 
-            other.GetComponent<Player>().health -= damage;
+            if (other.GetComponent<Player>().health > 0)
+            {
+                other.GetComponent<Player>().health -= CalculateDamage();
+            }
             Debug.Log(other.GetComponent<Player>().health);
             Destroy(gameObject);
         }
+    }
+
+    private float CalculateDamage()
+    {
+        return grams / maxGrams;
     }
 }
