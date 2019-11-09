@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -16,13 +15,16 @@ public class Player : MonoBehaviour
     public float health;
     public Text healthDisplay;
 
+    public Button restart;
+
     private void Update()
     {
         healthDisplay.text = "WPhe: " + (Mathf.Round(health * 1000.0f) / 1000.0f).ToString();
 
         if (health <=0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            restart.gameObject.SetActive(true);
+            DestroyGameObjects();
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
@@ -36,6 +38,18 @@ public class Player : MonoBehaviour
         {
             targetPos = new Vector2(transform.position.x, transform.position.y - yIncrement);
             transform.position = targetPos;
+        }
+    }
+
+    private void DestroyGameObjects()
+    {
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        Destroy(GameObject.FindGameObjectWithTag("Spawner"));
+
+        GameObject[] GameObjects = GameObject.FindGameObjectsWithTag("Obstacle");
+        for (int i = 0; i < GameObjects.Length; i++)
+        {
+            Destroy(GameObjects[i]);
         }
     }
 }
