@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bf8ff1b15ce3d44aae11fddbfaec26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grams: 5
+  grams: 20
   maxGrams: 62
   speed: 16
   effect: {fileID: 8322739279479241611, guid: 8dfebccc3a5aaad4ab9a9368ed131c7b, type: 3}

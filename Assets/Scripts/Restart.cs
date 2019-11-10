@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class Restart : MonoBehaviour
 {
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
     public void RestartGame()
     {
         Time.timeScale = 0;

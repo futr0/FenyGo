@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Obstacle : MonoBehaviour
 {
@@ -21,16 +22,17 @@ public class Obstacle : MonoBehaviour
         {
             Instantiate(effect, transform.position, Quaternion.identity);
 
-            if (other.GetComponent<Player>().health > 0)
+            if (other.GetComponent<Player>().wphe < other.GetComponent<Player>().targetWphe)
             {
-                other.GetComponent<Player>().health -= CalculateDamage();
+                other.GetComponent<Player>().wphe += CalculateWpheIncrement();
+                other.GetComponent<Player>().points += 1;
             }
-            Debug.Log(other.GetComponent<Player>().health);
+            //Debug.Log(other.GetComponent<Player>().wphe);
             Destroy(gameObject);
         }
     }
 
-    private float CalculateDamage()
+    private float CalculateWpheIncrement()
     {
         return grams / maxGrams;
     }

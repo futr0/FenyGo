@@ -12,17 +12,31 @@ public class Player : MonoBehaviour
     public float maxHeight;
     public float minHeight;
 
-    public float health;
-    public Text healthDisplay;
+    public float wphe;
+    public float targetWphe;
+    public Text wpheDisplay;
+    public Text scoreDisplay;
 
     public Button restart;
+    public int points = 0;
 
     private void Update()
     {
-        healthDisplay.text = "WPhe: " + (Mathf.Round(health * 1000.0f) / 1000.0f).ToString();
-
-        if (health <=0)
+        if (Input.GetKey(KeyCode.Escape))
         {
+            Application.Quit();
+        }
+
+        if (wphe < targetWphe)
+        {
+            wpheDisplay.text = "WPhe: " + (Mathf.Round(wphe * 1000.0f) / 1000.0f).ToString();
+            scoreDisplay.text = "Punkty: " + points;
+        }
+
+        if (wphe >= targetWphe)
+        {
+            wpheDisplay.text = "WPhe: " + targetWphe;
+            scoreDisplay.text = "Punkty: " + points;
             restart.gameObject.SetActive(true);
             DestroyGameObjects();
         }
@@ -31,12 +45,12 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
         {
-            targetPos = new Vector2(transform.position.x, transform.position.y + yIncrement);
+            targetPos = new Vector2(transform.position.x, transform.position.y + 10);
             transform.position = targetPos;
         }
         else if(Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
         {
-            targetPos = new Vector2(transform.position.x, transform.position.y - yIncrement);
+            targetPos = new Vector2(transform.position.x, transform.position.y - 10);
             transform.position = targetPos;
         }
     }
