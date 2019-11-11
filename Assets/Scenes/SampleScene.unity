@@ -188,7 +188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'WHPE: 0'
 --- !u!222 &84656499
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -999,6 +999,7 @@ MonoBehaviour:
   highScoreDisplay: {fileID: 1835234162}
   restartButton: {fileID: 293276699}
   points: 0
+  restart: {fileID: 293276698}
 --- !u!212 &2073990721
 SpriteRenderer:
   m_ObjectHideFlags: 0

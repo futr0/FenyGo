@@ -2,7 +2,7 @@
 using System.IO;
 using System;
 
-public class ScoreFileManager : MonoBehaviour
+public class ScoreFileManager
 {
     private readonly string scoresTxtPath = "Assets/Scores/Highscore.txt";
     public void SaveResultToFile(int points)
@@ -15,7 +15,7 @@ public class ScoreFileManager : MonoBehaviour
                 using (TextWriter writer = new StreamWriter(scoresTxtPath, false))
                 {
                     writer.WriteLine(points);
-                    Debug.Log("Higscore.txt writed with: " + points);
+                    //Debug.Log("Higscore.txt writed with: " + points);
 
                     writer.Close();
                 }
@@ -35,7 +35,7 @@ public class ScoreFileManager : MonoBehaviour
             using (StreamReader reader = new StreamReader(scoresTxtPath))
             {
                 var parsingResult = int.TryParse(reader.ReadToEnd(), out result);
-                Debug.Log("Higscore.txt readed");
+                //Debug.Log("Higscore.txt readed");
                 reader.Close();
             }
         }

@@ -19,9 +19,8 @@ public class Player : MonoBehaviour
     public Button restartButton;
     public int points = 0;
 
-    private ScoreFileManager scoreFileManager = new ScoreFileManager();
-    private readonly Restart restart = new Restart();
-
+    private readonly ScoreFileManager scoreFileManager = new ScoreFileManager();
+    public Restart restart;
     private void Update()
     {
         if (Input.GetKey(KeyCode.Escape))
