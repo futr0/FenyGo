@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grams: 25
   maxGrams: 166
-  speed: 16
+  speed: 18
   effect: {fileID: 737612680883587601, guid: be65ecdd6aea46647ab59ecfed30722c, type: 3}
 --- !u!114 &3167024995222203735
 MonoBehaviour:

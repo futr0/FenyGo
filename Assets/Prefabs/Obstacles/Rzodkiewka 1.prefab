@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6110659197006629778
+--- !u!1 &1373226388236496824
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6110659197006629788}
-  - component: {fileID: 6110659197006629789}
-  - component: {fileID: 6110659197006629790}
-  - component: {fileID: 4404963807766597741}
-  - component: {fileID: 3397665204511276313}
+  - component: {fileID: 1373226388236496822}
+  - component: {fileID: 1373226388236496823}
+  - component: {fileID: 1373226388236496820}
+  - component: {fileID: 8854728914387072071}
+  - component: {fileID: 7558496711326554419}
   m_Layer: 0
-  m_Name: Czosnek
+  m_Name: Rzodkiewka
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6110659197006629788
+--- !u!4 &1373226388236496822
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6110659197006629778}
+  m_GameObject: {fileID: 1373226388236496824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.49, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6110659197006629789
+--- !u!212 &1373226388236496823
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6110659197006629778}
+  m_GameObject: {fileID: 1373226388236496824}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 33ec591b8af591045be8811f273c3871, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67969d359dde5ae438bd064b15679cc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,42 +83,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6110659197006629790
+--- !u!114 &1373226388236496820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6110659197006629778}
+  m_GameObject: {fileID: 1373226388236496824}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33bf8ff1b15ce3d44aae11fddbfaec26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grams: 25
-  maxGrams: 7
-  speed: 21
+  maxGrams: 38
+  speed: 16
   effect: {fileID: 8140741848245425774, guid: 5c8fb755e6f329642abd856b00b657f2, type: 3}
---- !u!114 &4404963807766597741
+--- !u!114 &8854728914387072071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6110659197006629778}
+  m_GameObject: {fileID: 1373226388236496824}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37c0361ecd02b0f44adf5e719bfa3ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 6
---- !u!61 &3397665204511276313
+--- !u!61 &7558496711326554419
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6110659197006629778}
+  m_GameObject: {fileID: 1373226388236496824}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -129,12 +129,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.38, y: 1.71}
+    oldSize: {x: 1.5, y: 1.42}
     newSize: {x: 6.94, y: 6.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.36, y: 1.67}
+  m_Size: {x: 1.35, y: 1.38}
   m_EdgeRadius: 0
