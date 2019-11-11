@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -16,9 +14,13 @@ public class Player : MonoBehaviour
     public float targetWphe;
     public Text wpheDisplay;
     public Text scoreDisplay;
+    public Text highScoreDisplay;
 
-    public Button restart;
+    public Button restartButton;
     public int points = 0;
+
+    private ScoreFileManager scoreFileManager = new ScoreFileManager();
+    private readonly Restart restart = new Restart();
 
     private void Update()
     {
@@ -29,16 +31,19 @@ public class Player : MonoBehaviour
 
         if (wphe < targetWphe)
         {
-            wpheDisplay.text = "WPhe: " + (Mathf.Round(wphe * 1000.0f) / 1000.0f).ToString();
-            scoreDisplay.text = "Punkty: " + points;
+            wpheDisplay.text = string.Format("WPHE: {0}/{1}", Mathf.Round(wphe * 1000.0f) / 1000.0f, targetWphe);
+            scoreDisplay.text = string.Format("Punkty: {0}", points);
         }
 
         if (wphe >= targetWphe)
         {
-            wpheDisplay.text = "WPhe: " + targetWphe;
-            scoreDisplay.text = "Punkty: " + points;
-            restart.gameObject.SetActive(true);
-            DestroyGameObjects();
+            scoreFileManager.SaveResultToFile(points);
+            wpheDisplay.text = string.Format("WPHE: {0}/{1}", targetWphe, targetWphe);
+            scoreDisplay.text = string.Format("Punkty: {0}", points);
+            highScoreDisplay.text = string.Format("Najlepszy wynik: {0}", scoreFileManager.GetBestResult());
+            highScoreDisplay.gameObject.SetActive(true);
+            restartButton.gameObject.SetActive(true);
+            restart.DestroyGameObjects();
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
@@ -55,15 +60,4 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void DestroyGameObjects()
-    {
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
-        Destroy(GameObject.FindGameObjectWithTag("Spawner"));
-
-        GameObject[] GameObjects = GameObject.FindGameObjectsWithTag("Obstacle");
-        for (int i = 0; i < GameObjects.Length; i++)
-        {
-            Destroy(GameObjects[i]);
-        }
-    }
 }

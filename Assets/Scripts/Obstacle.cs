@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Obstacle : MonoBehaviour
 {
     public float grams;
     public float maxGrams;
     public float speed;
-
     public GameObject effect;
 
     private void Update()
@@ -20,14 +17,20 @@ public class Obstacle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Instantiate(effect, transform.position, Quaternion.identity);
+            try
+            {
+                Instantiate(effect, transform.position, Quaternion.identity);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e.Message);
+            }
 
             if (other.GetComponent<Player>().wphe < other.GetComponent<Player>().targetWphe)
             {
                 other.GetComponent<Player>().wphe += CalculateWpheIncrement();
                 other.GetComponent<Player>().points += 1;
             }
-            //Debug.Log(other.GetComponent<Player>().wphe);
             Destroy(gameObject);
         }
     }
