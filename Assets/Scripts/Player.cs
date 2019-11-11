@@ -30,13 +30,13 @@ public class Player : MonoBehaviour
 
         if (wphe < targetWphe)
         {
-            UpdateHUDScores(Mathf.Round(wphe * 1000.0f) / 1000.0f);
+            UpdateUIScores(Mathf.Round(wphe * 1000.0f) / 1000.0f);
         }
 
         if (wphe >= targetWphe)
         {
             SavePoints();
-            UpdateHUDScores(targetWphe);
+            UpdateUIScores(targetWphe);
             PrintBestScore();
             PrepareToRestart();
         }
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         scoreFileManager.SaveResultToFile(points);
     }
 
-    private void UpdateHUDScores(float wphe)
+    private void UpdateUIScores(float wphe)
     {
         wpheDisplay.text = string.Format("WPHE: {0}/{1}", wphe, targetWphe);
         scoreDisplay.text = string.Format("Punkty: {0}", points);

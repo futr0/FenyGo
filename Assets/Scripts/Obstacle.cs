@@ -1,12 +1,13 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    #region Variables
     public float grams;
     public float maxGrams;
     public float speed;
     public GameObject effect;
+    #endregion
 
     private void Update()
     {
@@ -17,19 +18,10 @@ public class Obstacle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            try
-            {
-                Instantiate(effect, transform.position, Quaternion.identity);
-            }
-            catch (Exception e)
-            {
-                Debug.Log(e.Message);
-            }
-
+            PlayObstacleEffect();
             if (other.GetComponent<Player>().wphe < other.GetComponent<Player>().targetWphe)
             {
-                other.GetComponent<Player>().wphe += CalculateWpheIncrement();
-                other.GetComponent<Player>().points += 1;
+                IncrementPlayerStats(other);
             }
             Destroy(gameObject);
         }
@@ -38,5 +30,16 @@ public class Obstacle : MonoBehaviour
     private float CalculateWpheIncrement()
     {
         return grams / maxGrams;
+    }
+
+    private void IncrementPlayerStats(Collider2D other)
+    {
+        other.GetComponent<Player>().wphe += CalculateWpheIncrement();
+        other.GetComponent<Player>().points += 1;
+    }
+
+    private void PlayObstacleEffect()
+    {
+        Instantiate(effect, transform.position, Quaternion.identity);
     }
 }
