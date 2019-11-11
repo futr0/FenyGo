@@ -10,7 +10,7 @@ public class Restart : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            Application.Quit();
+            QuitApp();
         }
     }
     public void RestartGame()
@@ -32,5 +32,10 @@ public class Restart : MonoBehaviour
         {
             Destroy(GameObjects[i]);
         }
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
     }
 }
