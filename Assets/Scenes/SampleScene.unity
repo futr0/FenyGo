@@ -610,15 +610,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePatterns:
-  - {fileID: 3718805735120139659, guid: 39ea99fdb5728374bbe6a91274adaca3, type: 3}
+  - {fileID: 8665634779831103268, guid: 3d22c221055f8064f8fd37ac19b5f1a6, type: 3}
+  - {fileID: 4594907281726140584, guid: ce5c9233a9621ca488931e5754e89492, type: 3}
+  - {fileID: 8903743283565400931, guid: a624e1b82a55a514db7731c6b3de21e9, type: 3}
+  - {fileID: 1659768402023330176, guid: 8b002afad4488154998f399311b1e74b, type: 3}
+  - {fileID: 2622764496578293830, guid: 969e7f40c82a15244b4674e76d13d3c8, type: 3}
+  - {fileID: 2843257479917251558, guid: e8411cf6067477f4a8bb51ebe7b53f57, type: 3}
   - {fileID: 5963435905683987858, guid: 8ce1be156ba10144bb3b274238c2892c, type: 3}
   - {fileID: 8309056768510312351, guid: 20aa8a522beb3f940911e61f28b63e22, type: 3}
-  - {fileID: 8903743283565400931, guid: a624e1b82a55a514db7731c6b3de21e9, type: 3}
-  - {fileID: 8903743283565400931, guid: a624e1b82a55a514db7731c6b3de21e9, type: 3}
+  - {fileID: 7537606906993233130, guid: 9672494a8557dd64597d4c8107d61ff5, type: 3}
+  - {fileID: 2622764496578293830, guid: 969e7f40c82a15244b4674e76d13d3c8, type: 3}
   - {fileID: 2532794079881704791, guid: 0916f22fae4ca5b4681458e6942214ff, type: 3}
-  - {fileID: 3718805735120139659, guid: 39ea99fdb5728374bbe6a91274adaca3, type: 3}
-  startTimeBtwSpawn: 2
-  decreaseTime: 0.08
+  - {fileID: 7774008906932962496, guid: c5d97024360ee6d498fde3879c5e6eca, type: 3}
+  - {fileID: 1348934907247384759, guid: 16d4ed4a309348940bbdade00b381b23, type: 3}
+  - {fileID: 7587329886073810547, guid: f373f63d37a17d14283aa816f20cd962, type: 3}
+  - {fileID: 5195129248604742629, guid: 84c4f464c8a590449801ce7c3885160f, type: 3}
+  - {fileID: 1542509275768643776, guid: 08bbf404ae6422f4e9d08402f4821347, type: 3}
+  startTimeBtwSpawn: 2.3
+  decreaseTime: 0.03
 --- !u!1 &794105219
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,8 +779,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201021311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0, z: 0}
-  m_LocalScale: {x: 1.5118563, y: 1.059941, z: 1}
+  m_LocalPosition: {x: 0.42, y: -0.86, z: 0}
+  m_LocalScale: {x: 1.8293462, y: 1.1135739, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -988,17 +997,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a78b810e85d4241848e99556df4c33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
   yIncrement: 2
   speed: 150
   maxHeight: 10
   minHeight: -10
   wphe: 0
-  targetWphe: 2
+  targetWphe: 20
   wpheDisplay: {fileID: 84656498}
   scoreDisplay: {fileID: 794105221}
   highScoreDisplay: {fileID: 1835234162}
   restartButton: {fileID: 293276699}
-  points: 0
   restart: {fileID: 293276698}
 --- !u!212 &2073990721
 SpriteRenderer:
