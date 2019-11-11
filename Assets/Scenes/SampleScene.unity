@@ -311,8 +311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.2, y: -21.75}
-  m_SizeDelta: {x: 306.7, y: 103.5}
+  m_AnchoredPosition: {x: 4.4, y: -54.8}
+  m_SizeDelta: {x: 497.6, y: 109.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293276698
 MonoBehaviour:
@@ -591,7 +591,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681841965}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.62, y: 0, z: 0}
+  m_LocalPosition: {x: 39.65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePatterns:
   - {fileID: 8665634779831103268, guid: 3d22c221055f8064f8fd37ac19b5f1a6, type: 3}
-  - {fileID: 4594907281726140584, guid: ce5c9233a9621ca488931e5754e89492, type: 3}
+  - {fileID: 5747754542815238453, guid: a74dcbf704ea8ad45974c3cffcda917c, type: 3}
   - {fileID: 8903743283565400931, guid: a624e1b82a55a514db7731c6b3de21e9, type: 3}
   - {fileID: 1659768402023330176, guid: 8b002afad4488154998f399311b1e74b, type: 3}
   - {fileID: 2622764496578293830, guid: 969e7f40c82a15244b4674e76d13d3c8, type: 3}
@@ -626,6 +626,9 @@ MonoBehaviour:
   - {fileID: 7587329886073810547, guid: f373f63d37a17d14283aa816f20cd962, type: 3}
   - {fileID: 5195129248604742629, guid: 84c4f464c8a590449801ce7c3885160f, type: 3}
   - {fileID: 1542509275768643776, guid: 08bbf404ae6422f4e9d08402f4821347, type: 3}
+  - {fileID: 3269679904730450618, guid: 2ec5d9d1b851c0a4b8a924bac8ec8003, type: 3}
+  - {fileID: 5920717785310636538, guid: 981b09f8441fbd4479d33b2e0cb7d1a3, type: 3}
+  - {fileID: 2561614378471780225, guid: 7fafcbe5cee0ee34786f96f4e05d964a, type: 3}
   startTimeBtwSpawn: 2.3
   decreaseTime: 0.03
 --- !u!1 &794105219
@@ -819,8 +822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.2, y: 60.025005}
-  m_SizeDelta: {x: 300.26, y: 60.05}
+  m_AnchoredPosition: {x: 4.4, y: 20.200005}
+  m_SizeDelta: {x: 497.6, y: 40.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1835234162
 MonoBehaviour:
@@ -853,7 +856,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Najlepszy wynik:'
+  m_Text: 'Co raz lepiej. Rekord: 1'
 --- !u!222 &1835234163
 CanvasRenderer:
   m_ObjectHideFlags: 0

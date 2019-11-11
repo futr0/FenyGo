@@ -68,7 +68,15 @@ public class Player : MonoBehaviour
 
     private void PrintBestScore()
     {
-        highScoreDisplay.text = string.Format("Najlepszy wynik: {0}", scoreFileManager.GetBestResult());
+        var bestResult = scoreFileManager.GetBestResult();
+        if (points == bestResult)
+        {
+            highScoreDisplay.text = string.Format("Rekord pobity! Wynik: {0}", scoreFileManager.GetBestResult());
+        }
+        else
+        {
+            highScoreDisplay.text = string.Format("Co raz lepiej. Rekord: {0}", scoreFileManager.GetBestResult());
+        }
         highScoreDisplay.gameObject.SetActive(true);
     }
 
